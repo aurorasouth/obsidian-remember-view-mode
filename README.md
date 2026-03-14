@@ -1,6 +1,6 @@
 
-[![GitHub Release](https://img.shields.io/github/v/release/aurorasouth/obsidian-remember-view-mode)](https://github.com/aurorasouth/obsidian-remember-view-mode/releases)
-[![License: MIT](https://img.shields.io/github/license/aurorasouth/obsidian-remember-view-mode)](https://github.com/aurorasouth/obsidian-remember-view-mode/blob/master/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/aurorasouth/obsidian-remember-view-mode)](https://github.com/aurorasouth/obsidian-remember-view-mode/releases)&nbsp;
+[![License: MIT](https://img.shields.io/github/license/aurorasouth/obsidian-remember-view-mode)](https://github.com/aurorasouth/obsidian-remember-view-mode/blob/master/LICENSE)&nbsp;
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/aurorasouth)
 
 
