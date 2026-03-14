@@ -1,35 +1,39 @@
 import {App, PluginSettingTab, Setting} from "obsidian";
-import MyPlugin from "./main";
+import type RememberViewModePlugin from "./main";
 
-export interface MyPluginSettings {
-	mySetting: string;
+export type ViewMode = 'source' | 'preview';
+
+export interface RememberViewModeSettings {
+	rememberViewMode: boolean;
+	fileViewModes: Record<string, ViewMode>;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: 'default'
+export const DEFAULT_SETTINGS: RememberViewModeSettings = {
+	rememberViewMode: true,
+	fileViewModes: {},
 }
 
-export class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
+export class RememberViewModeSettingTab extends PluginSettingTab {
+	plugin: RememberViewModePlugin;
 
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: RememberViewModePlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
 
+	/** Build the settings tab UI (toggle for remember view mode). */
 	display(): void {
 		const {containerEl} = this;
 
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc('It\'s a secret')
-			.addText(text => text
-				.setPlaceholder('Enter your secret')
-				.setValue(this.plugin.settings.mySetting)
+			.setName('Remember view mode')
+			.setDesc('Automatically remember and restore edit/preview mode for each note.')
+			.addToggle(toggle => toggle
+				.setValue(this.plugin.settings.rememberViewMode)
 				.onChange(async (value) => {
-					this.plugin.settings.mySetting = value;
+					this.plugin.settings.rememberViewMode = value;
 					await this.plugin.saveSettings();
 				}));
 	}

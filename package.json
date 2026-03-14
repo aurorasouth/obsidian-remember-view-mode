@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-remember-view-mode",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Automatically remember and restore edit/preview mode for each note.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
